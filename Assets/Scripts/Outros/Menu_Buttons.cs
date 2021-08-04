@@ -856,15 +856,19 @@ public class Menu_Buttons : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Som") == 1)
         {
+            Debug.Log("if");
             PlayerPrefs.SetInt("Som", -1);
             AudioListener.volume = 1;
-            button.image.sprite = SomOn;
+            //button.image.sprite = SomOn;
+            Som.GetComponent<Image>().sprite = SomOn;
         } 
         else
         {
+            Debug.Log("else");
             PlayerPrefs.SetInt("Som", 1);
             AudioListener.volume = 0;
-            button.image.sprite = SomOff;
+            //button.image.sprite = SomOff;
+            Som.GetComponent<Image>().sprite = SomOff;
         }
     }
 
